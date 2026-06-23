@@ -1,0 +1,610 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dashboard | Pixel Memories Luxury Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1f1a1b",
+                    "secondary": "#745758",
+                    "primary-fixed": "#ffd8e7",
+                    "surface-bright": "#fff8f7",
+                    "inverse-surface": "#342f2f",
+                    "surface-container": "#f6ebeb",
+                    "tertiary-container": "#a09f9b",
+                    "on-secondary-container": "#785b5c",
+                    "secondary-fixed-dim": "#e2bebe",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#330d22",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#fff8f7",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "surface-tint": "#814f66",
+                    "tertiary": "#5e5e5c",
+                    "on-primary-fixed-variant": "#66384e",
+                    "on-primary-container": "#53283d",
+                    "on-tertiary-fixed": "#1b1c1a",
+                    "inverse-primary": "#f3b5cf",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#814f66",
+                    "tertiary-fixed-dim": "#c8c6c3",
+                    "surface-container-high": "#f0e6e5",
+                    "on-tertiary-container": "#363634",
+                    "inverse-on-surface": "#f9eeee",
+                    "tertiary-fixed": "#e4e2de",
+                    "primary-container": "#c88ea7",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5a4041",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1f1a1b",
+                    "background": "#fff8f7",
+                    "secondary-container": "#fdd7d7",
+                    "surface-dim": "#e2d8d7",
+                    "surface-variant": "#eae0e0",
+                    "secondary-fixed": "#ffdada",
+                    "on-secondary-fixed": "#2a1617",
+                    "on-surface-variant": "#504348",
+                    "outline-variant": "#d4c2c7",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#f3b5cf",
+                    "surface-container-low": "#fcf1f1",
+                    "surface-container-highest": "#eae0e0",
+                    "outline": "#827378"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "80px",
+                    "unit": "8px",
+                    "container-max-width": "1280px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"]
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff8f7;
+            font-family: 'Montserrat', sans-serif;
+            color: #1f1a1b;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 248, 247, 0.85);
+        }
+        .premium-shadow {
+            box-shadow: 0 10px 30px -10px rgba(129, 79, 102, 0.08);
+        }
+        .luxury-card {
+            background: #ffffff;
+            border: 1px solid rgba(212, 194, 199, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .luxury-card:hover {
+            border-color: #c88ea7;
+            transform: translateY(-2px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen overflow-x-hidden">
+<!-- SIDE NAVIGATION -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface border-r border-outline-variant/30 z-50 flex flex-col py-10 px-8 hidden lg:flex">
+<div class="mb-12">
+<h1 class="font-headline-md text-3xl text-primary leading-tight">Pixel<br>Memories</h1>
+<p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mt-2">Bespoke Studio Admin</p>
+</div>
+<nav class="flex-1 space-y-6">
+<a class="flex items-center gap-4 text-primary font-semibold group transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-body-md text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span class="font-body-md text-sm">Bookings</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="font-body-md text-sm">Customers</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">camera_enhance</span>
+<span class="font-body-md text-sm">Services</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+<span class="font-body-md text-sm">Gallery</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="font-body-md text-sm">Reviews</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-body-md text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<button class="w-full bg-primary text-on-primary py-4 px-4 rounded-xl font-label-sm text-[11px] uppercase tracking-widest hover:bg-on-primary-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Booking
+        </button>
+</div>
+</aside>
+<!-- MAIN CONTENT CANVAS -->
+<main class="flex-1 p-8 lg:p-12 ml-0 lg:ml-64 bg-background">
+<!-- TOP NAV BAR -->
+<header class="fixed top-0 right-0 h-20 z-40 flex justify-between items-center px-12 glass-nav border-b border-outline-variant/20 w-full lg:w-[calc(100%-16rem)]">
+<div class="flex items-center gap-4 bg-surface-container-low px-5 py-2 rounded-full border border-outline-variant/20 focus-within:ring-1 focus-within:ring-primary/30 transition-all w-96">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body-md w-full placeholder:text-on-surface-variant/40" placeholder="Search appointments, clients, invoices..." type="text">
+</div>
+<div class="flex items-center gap-8">
+<button class="relative text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-primary rounded-full border-2 border-surface"></span>
+</button>
+<div class="flex items-center gap-4 border-l border-outline-variant/30 pl-8">
+<div class="text-right">
+<p class="font-label-sm text-[12px] text-on-surface font-semibold">Adeline Rose</p>
+<p class="text-[9px] uppercase tracking-widest text-on-surface-variant">Studio Director</p>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container p-0.5">
+<img referrerpolicy="no-referrer" alt="Admin Avatar" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUG5gtVTxDRvrOeXDFMkkLh0RkNZQcW8GjiqsHUo71GCslf4HWmT4NJb_O4L3YkSTrRj5DCb-W_4m4TBjhLiGEIcgVr4op52LRa-JgaNclUwYlBRDkqH0Bj4I3L7docMg9KTr1-BVXQ_wt9v5ciGNPv52WC0lQb8KLxpgIU0P7RmxdpFyA63-Ce4uooZPRNOA40Q-vq1BtPwgiatYq5rJdvH4FotKuyb3dSzneEcUZojKSJlqoisAepuGoD7hRS-IVPt_CVtVml0">
+</div>
+</div>
+</div>
+</header>
+<!-- DASHBOARD BODY -->
+<div class="mt-20 space-y-10">
+<!-- OVERVIEW STATS -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary mb-4">book_online</span>
+<div>
+<p class="text-2xl font-headline-md text-primary">156</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Total Bookings</p>
+</div>
+</div>
+<div class="luxury-card p-6 rounded-2xl flex flex-col justify-between border-primary-container bg-primary-container/5">
+<span class="material-symbols-outlined text-primary mb-4">pending_actions</span>
+<div>
+<p class="text-2xl font-headline-md text-primary">08</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Pending</p>
+</div>
+</div>
+<div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary mb-4">event_upcoming</span>
+<div>
+<p class="text-2xl font-headline-md text-primary">14</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Upcoming</p>
+</div>
+</div>
+<div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary mb-4">task_alt</span>
+<div>
+<p class="text-2xl font-headline-md text-primary">482</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Completed</p>
+</div>
+</div>
+<div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary mb-4">payments</span>
+<div>
+<p class="text-2xl font-headline-md text-primary">₹42k</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Total Revenue</p>
+</div>
+</div>
+<div class="luxury-card p-6 rounded-2xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary mb-4">diversity_3</span>
+<div>
+<p class="text-2xl font-headline-md text-primary">410</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Total Customers</p>
+</div>
+</div>
+</section>
+<!-- MAIN GRID: CALENDAR & ANALYTICS -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Revenue Analytics -->
+<div class="lg:col-span-8 luxury-card p-8 rounded-2xl premium-shadow">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h2 class="font-headline-md text-2xl">Performance Analytics</h2>
+<p class="text-xs text-on-surface-variant mt-1">Studio growth &amp; booking trends</p>
+</div>
+<select class="bg-surface-container-low border-none rounded-lg text-[11px] font-label-sm uppercase tracking-wider py-1.5 pl-3 pr-8 focus:ring-1 focus:ring-primary/20">
+<option>Last 6 Months</option>
+<option>Current Year</option>
+</select>
+</div>
+<div class="h-64 flex items-end gap-6 pb-2">
+<!-- Simple Bar Chart -->
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/20 rounded-t-lg h-32 group relative">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity rounded-t-lg"></div>
+</div>
+<span class="text-[10px] font-label-sm text-on-surface-variant">MAY</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/40 rounded-t-lg h-44 group relative"></div>
+<span class="text-[10px] font-label-sm text-on-surface-variant">JUN</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/30 rounded-t-lg h-40 group relative"></div>
+<span class="text-[10px] font-label-sm text-on-surface-variant">JUL</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/60 rounded-t-lg h-56 group relative"></div>
+<span class="text-[10px] font-label-sm text-on-surface-variant">AUG</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary-container/50 rounded-t-lg h-48 group relative"></div>
+<span class="text-[10px] font-label-sm text-on-surface-variant">SEP</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary rounded-t-lg h-full group relative"></div>
+<span class="text-[10px] font-label-sm text-on-surface">OCT</span>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-3 gap-6 pt-6 border-t border-outline-variant/10">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Monthly Bookings</p>
+<p class="text-xl font-headline-md mt-1">24 Shoots</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Revenue Growth</p>
+<p class="text-xl font-headline-md mt-1 text-green-600">+12.4%</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Avg. Value</p>
+<p class="text-xl font-headline-md mt-1">₹1,850</p>
+</div>
+</div>
+</div>
+<!-- Calendar Sidebar -->
+<div class="lg:col-span-4 luxury-card p-8 rounded-2xl premium-shadow">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-xl">Oct 2023</h3>
+<div class="flex gap-2">
+<button class="p-1 hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[18px]">chevron_left</span></button>
+<button class="p-1 hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[18px]">chevron_right</span></button>
+</div>
+</div>
+<!-- Simple Calendar Grid -->
+<div class="grid grid-cols-7 gap-y-4 text-center">
+<span class="text-[10px] font-bold text-on-surface-variant/50">M</span>
+<span class="text-[10px] font-bold text-on-surface-variant/50">T</span>
+<span class="text-[10px] font-bold text-on-surface-variant/50">W</span>
+<span class="text-[10px] font-bold text-on-surface-variant/50">T</span>
+<span class="text-[10px] font-bold text-on-surface-variant/50">F</span>
+<span class="text-[10px] font-bold text-on-surface-variant/50">S</span>
+<span class="text-[10px] font-bold text-on-surface-variant/50">S</span>
+<span class="text-xs py-1 opacity-20">25</span>
+<span class="text-xs py-1 opacity-20">26</span>
+<span class="text-xs py-1 opacity-20">27</span>
+<span class="text-xs py-1 opacity-20">28</span>
+<span class="text-xs py-1 opacity-20">29</span>
+<span class="text-xs py-1 opacity-20">30</span>
+<span class="text-xs py-1">1</span>
+<!-- Calendar days ... simplified -->
+<span class="text-xs py-1 font-medium">10</span>
+<span class="text-xs py-1 font-medium">11</span>
+<span class="text-xs py-1 font-medium bg-primary-container/20 text-primary rounded-full ring-1 ring-primary/20">12</span>
+<span class="text-xs py-1 font-medium">13</span>
+<span class="text-xs py-1 font-medium">14</span>
+<span class="text-xs py-1 font-medium">15</span>
+<span class="text-xs py-1 font-medium">16</span>
+<span class="text-xs py-1 font-medium">24</span>
+<span class="text-xs py-1 font-medium bg-primary text-on-primary rounded-full shadow-md">25</span>
+<span class="text-xs py-1 font-medium">26</span>
+<span class="text-xs py-1 font-medium bg-primary-container/20 text-primary rounded-full ring-1 ring-primary/20">27</span>
+<span class="text-xs py-1 font-medium">28</span>
+<span class="text-xs py-1 font-medium">29</span>
+<span class="text-xs py-1 font-medium">30</span>
+</div>
+<div class="mt-8 space-y-4">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Upcoming Shoots</p>
+<div class="flex items-center gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="w-1 bg-primary h-8 rounded-full"></div>
+<div>
+<p class="text-xs font-semibold">Sarah Jenkins • Wedding</p>
+<p class="text-[10px] text-on-surface-variant">09:00 AM • The Grand Hall</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="w-1 bg-secondary h-8 rounded-full"></div>
+<div>
+<p class="text-xs font-semibold">Mark Thompson • Portrait</p>
+<p class="text-[10px] text-on-surface-variant">02:30 PM • Studio A</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TABLE SECTION: RECENT BOOKINGS -->
+<section class="luxury-card rounded-2xl overflow-hidden premium-shadow">
+<div class="px-8 py-6 border-b border-outline-variant/20 flex justify-between items-center bg-surface">
+<h2 class="font-headline-md text-2xl">Recent Bookings</h2>
+<a class="text-[11px] font-label-sm uppercase tracking-widest text-primary hover:underline" href="#">View Archive</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+<tr>
+<th class="px-8 py-4">Booking ID</th>
+<th class="px-8 py-4">Name</th>
+<th class="px-8 py-4">Service</th>
+<th class="px-8 py-4">Package</th>
+<th class="px-8 py-4">Date</th>
+<th class="px-8 py-4">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-primary-container/5 transition-colors cursor-pointer group">
+<td class="px-8 py-5 text-sm font-body-md text-on-surface-variant">#PM-8821</td>
+<td class="px-8 py-5">
+<p class="text-sm font-semibold">Elena Gilbert</p>
+<p class="text-[11px] text-on-surface-variant">elena.g@example.com</p>
+</td>
+<td class="px-8 py-5 text-sm">Maternity</td>
+<td class="px-8 py-5 text-sm">Heirloom Collection</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Oct 28, 2023</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[9px] font-bold uppercase tracking-widest">Confirmed</span>
+</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors cursor-pointer group">
+<td class="px-8 py-5 text-sm font-body-md text-on-surface-variant">#PM-8822</td>
+<td class="px-8 py-5">
+<p class="text-sm font-semibold">Vance Miller</p>
+<p class="text-[11px] text-on-surface-variant">vance@creative.co</p>
+</td>
+<td class="px-8 py-5 text-sm">Wedding</td>
+<td class="px-8 py-5 text-sm">Full Event Day</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Nov 12, 2023</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-[9px] font-bold uppercase tracking-widest">Pending</span>
+</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors cursor-pointer group">
+<td class="px-8 py-5 text-sm font-body-md text-on-surface-variant">#PM-8819</td>
+<td class="px-8 py-5">
+<p class="text-sm font-semibold">Bloom Academy</p>
+<p class="text-[11px] text-on-surface-variant">office@bloom.edu</p>
+</td>
+<td class="px-8 py-5 text-sm">School</td>
+<td class="px-8 py-5 text-sm">Yearbook Basic</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Oct 24, 2023</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-[9px] font-bold uppercase tracking-widest">Completed</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- PERFORMANCE BY CATEGORY & QUICK ACTIONS -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Popular Services Performance -->
+<div class="lg:col-span-8">
+<h3 class="font-headline-md text-xl mb-6">Service Popularity</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="luxury-card p-6 rounded-2xl">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<span class="text-green-600 text-xs font-bold">+5%</span>
+</div>
+<h4 class="font-semibold text-sm">Wedding</h4>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-[10px] uppercase text-on-surface-variant">Market Share</span>
+<span class="text-sm font-bold">45%</span>
+</div>
+<div class="mt-2 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 45%;"></div>
+</div>
+</div>
+<div class="luxury-card p-6 rounded-2xl">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<span class="text-on-surface-variant text-xs font-bold">Stable</span>
+</div>
+<h4 class="font-semibold text-sm">Maternity</h4>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-[10px] uppercase text-on-surface-variant">Market Share</span>
+<span class="text-sm font-bold">28%</span>
+</div>
+<div class="mt-2 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 28%;"></div>
+</div>
+</div>
+<div class="luxury-card p-6 rounded-2xl">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">school</span>
+</div>
+<span class="text-green-600 text-xs font-bold">+12%</span>
+</div>
+<h4 class="font-semibold text-sm">School/College</h4>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-[10px] uppercase text-on-surface-variant">Market Share</span>
+<span class="text-sm font-bold">18%</span>
+</div>
+<div class="mt-2 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 18%;"></div>
+</div>
+</div>
+</div>
+<!-- Business Insights -->
+<div class="mt-10 luxury-card p-8 rounded-2xl bg-secondary-container/10 border-none premium-shadow">
+<h3 class="font-label-sm uppercase tracking-[0.2em] text-primary text-xs mb-6">Photography Business Insights</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Most Booked</p>
+<p class="text-sm font-semibold">Wedding Luxury</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Avg. Booking</p>
+<p class="text-sm font-semibold">₹2,450.00</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">This Month</p>
+<p class="text-sm font-semibold">18 Scheduled</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">CSAT Rate</p>
+<p class="text-sm font-semibold text-green-600">98.5% Highly Happy</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions & Inquiries -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div>
+<h3 class="font-headline-md text-xl mb-6">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-4">
+<button class="luxury-card p-5 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-primary-container/10 transition-all border-dashed">
+<span class="material-symbols-outlined text-primary">add_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Add Booking</span>
+</button>
+<button class="luxury-card p-5 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-primary-container/10 transition-all border-dashed">
+<span class="material-symbols-outlined text-primary">person_add</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Add Client</span>
+</button>
+<button class="luxury-card p-5 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-primary-container/10 transition-all border-dashed">
+<span class="material-symbols-outlined text-primary">cloud_upload</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Portfolio</span>
+</button>
+<button class="luxury-card p-5 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-primary-container/10 transition-all border-dashed">
+<span class="material-symbols-outlined text-primary">download</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Reports</span>
+</button>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-xl mb-6">Customer Inquiries</h3>
+<div class="space-y-4">
+<div class="luxury-card p-5 rounded-2xl border-l-4 border-l-primary">
+<div class="flex justify-between items-start mb-2">
+<p class="text-xs font-bold">Clarissa Wang</p>
+<span class="text-[9px] text-on-surface-variant">2h ago</span>
+</div>
+<p class="text-[11px] text-on-surface-variant line-clamp-2 italic">"Interested in your Wedding Heirloom package for next July. Do you have..."</p>
+</div>
+<div class="luxury-card p-5 rounded-2xl">
+<div class="flex justify-between items-start mb-2">
+<p class="text-xs font-bold">Liam Peterson</p>
+<span class="text-[9px] text-on-surface-variant">5h ago</span>
+</div>
+<p class="text-[11px] text-on-surface-variant line-clamp-2 italic">"Checking availability for a corporate headshot session for 12 staff members..."</p>
+</div>
+<button class="w-full text-center py-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:underline">View All Messages</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ACTIVITY FEED -->
+<section class="pb-20">
+<h2 class="font-headline-md text-2xl mb-8">Recent Studio Activity</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<div class="luxury-card p-8 rounded-2xl premium-shadow">
+<div class="space-y-8 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant/30">
+<div class="relative pl-10 flex gap-4">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary ring-4 ring-white">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">add</span>
+</div>
+<div>
+<p class="text-sm"><span class="font-bold">New Booking:</span> Sarah Jenkins (Wedding Luxury)</p>
+<p class="text-[11px] text-on-surface-variant mt-1">10 minutes ago</p>
+</div>
+</div>
+<div class="relative pl-10 flex gap-4">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white ring-4 ring-white">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<p class="text-sm"><span class="font-bold">Shoot Completed:</span> Maternity Session for Julia Roberts</p>
+<p class="text-[11px] text-on-surface-variant mt-1">3 hours ago</p>
+</div>
+</div>
+<div class="relative pl-10 flex gap-4">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-amber-400 flex items-center justify-center text-white ring-4 ring-white">
+<span class="material-symbols-outlined text-[14px]">star</span>
+</div>
+<div>
+<p class="text-sm"><span class="font-bold">New Review:</span> 5-star rating from David Miller</p>
+<p class="text-[11px] text-on-surface-variant mt-1">Yesterday</p>
+</div>
+</div>
+<div class="relative pl-10 flex gap-4">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary ring-4 ring-white">
+<span class="material-symbols-outlined text-[14px]">person</span>
+</div>
+<div>
+<p class="text-sm"><span class="font-bold">New Customer:</span> The Smith Family registered</p>
+<p class="text-[11px] text-on-surface-variant mt-1">Yesterday at 4:30 PM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Access Gallery Snippet -->
+<div class="luxury-card p-8 rounded-2xl overflow-hidden relative premium-shadow">
+<h3 class="font-label-sm uppercase tracking-widest text-[10px] mb-4">Latest Portfolio Uploads</h3>
+<div class="grid grid-cols-2 gap-4 h-full">
+<div class="rounded-xl overflow-hidden h-40">
+<img referrerpolicy="no-referrer" alt="Wedding" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDktLdBUe_nZpvVylkndFKhc_cOQubJwXDweIt9TpxHU-K-LbB3h8vlslJ28zUWU_fFNJd1T-n45sEtTlesoCp2dgeVp3R8xj-q0JKt-4kwt0EYNFK6RATeSvUXkOzYdE4pjXvYjonmmnS66-AaqN_lBfoivypmHcLJl1Wq0iS9TpqZrsARvw1_x8pl18wJKBIaPVQPpuqNSMXWIqtkXc2xoAdGM9Fd-yl8NCgDYBAe-ptuvgLYk4kWt3NGm3mCHF5IPhzSeN4WIyk">
+</div>
+<div class="rounded-xl overflow-hidden h-40">
+<img referrerpolicy="no-referrer" alt="Maternity" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYNtJLBI7CkJBNibOu51m9VNnlCs9hUouPR6gwTbLp9bO0fCcYNP4qgiEYNEKct7YV9lzvAnnoOkYsLl29OJTe791Fq3b1psBxwqNYo40c5dwE3yGw2esGtudFKNOSsIJiD1DAdcdVQ1rnBV_bXeqlZ_p3xgxd4D3n9M13Kxp6GcPN0dGAXwTuNddnUoE_xXaJHQNZ3kauDANGh233NzeexmPl4a6k2F8ff75pFQUhW7uNPfzcHHF5oWcP_TULCQcHZ0KLeyYLQQ">
+</div>
+</div>
+<button class="absolute bottom-12 right-12 w-12 h-12 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script>
+    // Tab/Navigation active state logic could be added here
+    // For now, simple interactions
+    document.querySelectorAll('.luxury-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Subtle hover effect handled by CSS
+        });
+    });
+</script>
+
+
+</body></html>

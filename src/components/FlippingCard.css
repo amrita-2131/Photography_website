@@ -1,0 +1,48 @@
+.flipping-card-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+}
+
+.flipping-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: inherit;
+}
+
+/* Hover effect on desktop */
+@media (hover: hover) {
+  .flipping-card-container:hover .flipping-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Toggle effect on mobile/touch */
+.flipping-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flipping-card-front,
+.flipping-card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: inherit;
+  overflow: hidden;
+  /* We use translateZ and scale to prevent harsh clipping on Safari during 3D transforms */
+  transform: translateZ(1px);
+}
+
+.flipping-card-front {
+  background-color: var(--color-surface);
+}
+
+.flipping-card-back {
+  background-color: var(--color-surface);
+  transform: rotateY(180deg) translateZ(1px);
+}

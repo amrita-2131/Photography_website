@@ -1,0 +1,65 @@
+[
+  {
+    "id": "9e3c3696-53fd-49e1-bcb8-6a67b033daf4",
+    "name": "Adeline Rose",
+    "email": "admin@pixelmemories.com",
+    "phone": "+1 (555) 234-5678",
+    "password": "$2a$12$zZnpeIViwitA.xFS7TA8uu8vX2UAdchXhvpskTXcynd3Q4niSqn9G",
+    "role": "admin",
+    "createdAt": "2026-06-17T04:51:57.374Z"
+  },
+  {
+    "id": "313d08e2-72ad-42ed-92fc-3a71b4c55440",
+    "name": "Adeline Rose",
+    "email": "admin21@gmail.com",
+    "phone": "+1 (555) 234-5678",
+    "password": "$2a$12$f0iqJ0y7vX5cCXVLPLx3Fu.dd9LGIHD8d5MjvAnloleMFitnDaRy6",
+    "role": "admin",
+    "createdAt": "2026-06-17T05:16:00.264Z"
+  },
+  {
+    "id": "227f2386-5a78-47f5-a189-0f73a4c56a16",
+    "name": "Ajay Aditiya",
+    "email": "ajay23@gmail.com",
+    "phone": "9894056652",
+    "password": "$2a$12$W6LNU8H3vZo0SpLwUk1UCeTKcKmKsT4vAABIGq0hlUiD07prbdk8.",
+    "role": "user",
+    "createdAt": "2026-06-19T09:09:31.835Z"
+  },
+  {
+    "id": "d60c5e22-dee3-4cbb-b997-ca7378167512",
+    "name": "Amri",
+    "email": "amri21@gmail.com",
+    "phone": "6650580724",
+    "password": "$2a$12$pcoIlYQLqIuRusrPm7ebWOmlFf68/ckdL9NUUrhlBsFnQup0XIFVa",
+    "role": "user",
+    "createdAt": "2026-06-19T09:22:15.731Z"
+  },
+  {
+    "id": "6cdb5bde-a593-4e52-b0f3-3f867be6a260",
+    "name": "Amri",
+    "email": "amrita21@gmail.com",
+    "phone": "8036952312",
+    "password": "$2a$12$JYRUwzL8ekTtdNN2HB/lYOFzgRV.jnmA6yYmxhhXy0tKn4d8ZadIu",
+    "role": "user",
+    "createdAt": "2026-06-21T17:10:54.227Z"
+  },
+  {
+    "id": "208f3a71-44d7-4668-99cd-1713148329a4",
+    "name": "Amriii",
+    "email": "amrita386@gmail.com",
+    "phone": "8021308631",
+    "password": "$2a$12$imO5t7cuDneva.5rUf4K4eWuIMlIOODht5J.Fcx9gufD1H6/k7nQG",
+    "role": "user",
+    "createdAt": "2026-06-22T09:36:31.689Z"
+  },
+  {
+    "id": "c424bf3a-3522-4089-b5ce-3d474d7fd76f",
+    "name": "Priya",
+    "email": "priya123@gmail.com",
+    "phone": "90365874231",
+    "password": "$2a$12$RE8Bx9cnzKXRAfFDIcV9cuy1./UCj2xTDKW8EBiTRFujHUweK3sQ2",
+    "role": "user",
+    "createdAt": "2026-06-23T04:04:56.532Z"
+  }
+]

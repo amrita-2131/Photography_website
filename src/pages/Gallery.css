@@ -1,0 +1,56 @@
+.gallery-hero {
+  padding-top: 160px;
+  padding-bottom: var(--space-section);
+  text-align: center;
+  background-color: var(--color-surface);
+}
+.gallery-hero__inner { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.gallery-hero__eyebrow { color: var(--color-primary); }
+.gallery-hero h1 { color: var(--color-on-surface); }
+.gallery-hero__sub { color: var(--color-on-surface-variant); }
+
+/* Filters */
+.gallery-filter { padding: 0 0 56px; background: var(--color-surface); }
+.gallery-filter__inner { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.gallery-filter__chip {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-container);
+  border: 1px solid var(--color-outline-variant);
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.gallery-filter__chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.gallery-filter__chip--active {
+  background-color: var(--color-primary-container);
+  border-color: var(--color-primary-container);
+  color: var(--color-on-primary);
+}
+
+/* Gallery Grid */
+.gallery-grid-section { padding-bottom: var(--space-section); background: var(--color-surface); }
+.gallery-masonry {
+  columns: 1;
+  column-gap: var(--gutter);
+}
+@media (min-width: 640px) { .gallery-masonry { columns: 2; } }
+@media (min-width: 1024px) { .gallery-masonry { columns: 3; } }
+.gallery-masonry__item {
+  break-inside: avoid;
+  margin-bottom: var(--gutter);
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(200, 142, 167, 0.05);
+}
+.gallery-masonry__item img { 
+  width: 100%; 
+  display: block; 
+  filter: contrast(1.15) saturate(0.75) sepia(0.15) brightness(0.9);
+  transition: filter 0.5s ease, transform 0.7s ease;
+}
+.gallery-masonry__item:hover img {
+  filter: contrast(1.1) saturate(1.1) sepia(0) brightness(1.05);
+}
+.gallery-empty { text-align: center; color: var(--color-outline); margin-top: 80px; }

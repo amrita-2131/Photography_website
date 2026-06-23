@@ -1,0 +1,91 @@
+/* ── Interactive Gallery ── */
+.interactive-gallery-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.interactive-gallery-inner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  justify-content: center;
+  min-height: 480px; /* Space for the stacked cards */
+  margin: 0 auto;
+}
+
+.interactive-card-wrapper {
+  position: absolute;
+  /* Centering the base anchor point */
+  left: 50%;
+  top: 20px;
+  margin-left: -140px; /* Half of 280px width */
+  cursor: grab;
+}
+
+.interactive-card-wrapper:active {
+  cursor: grabbing;
+}
+
+.interactive-polaroid-card {
+  background-color: #ffffff; /* Crisp white for the photo border */
+  padding: 12px 12px 40px 12px; /* Larger bottom padding for the polaroid text area */
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(74, 63, 53, 0.1), 0 2px 10px rgba(74, 63, 53, 0.05); /* Premium drop shadow matching brand */
+  border: 1px solid rgba(212, 194, 199, 0.3); /* Subtle tie-in to the brand colors */
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  pointer-events: auto; /* Required for dragging */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none; /* Prevent scrolling when dragging on touch devices */
+}
+
+.interactive-polaroid-image {
+  width: 100%;
+  height: 336px;
+  object-fit: cover;
+  border-radius: 2px;
+  background-color: var(--color-surface-container-low);
+  pointer-events: none; /* Let drag events pass to the container */
+}
+
+.interactive-polaroid-caption {
+  margin-top: 16px;
+  font-family: 'Playfair Display', serif; /* Elegant typography */
+  font-size: 15px;
+  color: var(--color-on-surface);
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-style: italic;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .interactive-gallery-inner {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .interactive-gallery-inner {
+    min-height: 400px;
+  }
+  .interactive-card-wrapper {
+    margin-left: -110px;
+  }
+  .interactive-polaroid-card {
+    width: 220px;
+    padding: 8px 8px 32px 8px;
+  }
+  .interactive-polaroid-image {
+    height: 264px;
+  }
+}

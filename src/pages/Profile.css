@@ -1,0 +1,374 @@
+/* Profile Page Styles */
+
+.profile-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  background: var(--color-surface);
+}
+
+.profile-hero {
+  background: linear-gradient(135deg, var(--color-surface-container-low) 0%, var(--color-surface) 100%);
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: 48px 0;
+}
+
+.profile-hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.profile-hero__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 32px;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(200, 142, 167, 0.3);
+}
+
+.profile-hero__info { flex: 1; }
+
+.profile-hero__name {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--color-on-surface);
+  margin-bottom: 6px;
+}
+
+.profile-hero__email {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+  margin-bottom: 8px;
+}
+
+.profile-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--color-primary-fixed);
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-on-primary-container);
+}
+
+.profile-hero__badge--admin {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+/* Main grid */
+.profile-main {
+  padding: 60px 0 80px;
+}
+
+.profile-main__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .profile-main__grid { grid-template-columns: 360px 1fr; }
+}
+
+/* Panels */
+.profile-panel {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  box-shadow: 0 20px 40px rgba(200, 142, 167, 0.04);
+}
+
+.profile-panel__title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--color-on-surface);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-outline-variant);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-panel__title span { color: var(--color-primary-container); font-size: 20px; }
+
+/* Edit form fields */
+.profile-field {
+  margin-bottom: 24px;
+}
+
+.profile-field label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: 8px;
+}
+
+.profile-field input {
+  width: 100%;
+  background: var(--color-surface-container-low);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--color-on-surface);
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.profile-field input:focus { border-color: var(--color-primary); }
+
+.profile-field input:disabled {
+  background: var(--color-surface-container);
+  color: var(--color-on-surface-variant);
+  cursor: not-allowed;
+}
+
+.profile-save-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  background: var(--color-primary-container);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s;
+  margin-top: 8px;
+  box-shadow: 0 8px 24px rgba(200, 142, 167, 0.2);
+}
+
+.profile-save-btn:hover:not(:disabled) { background: var(--color-primary); transform: translateY(-1px); }
+.profile-save-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.profile-success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+}
+
+.profile-logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  background: transparent;
+  color: var(--color-error);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  margin-top: 16px;
+}
+
+.profile-logout-btn:hover {
+  background: var(--color-error);
+  color: #fff;
+}
+
+/* Booking Cards */
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.booking-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(212,194,199,0.3);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.booking-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(212,194,199,0.2);
+  padding-bottom: 16px;
+}
+.booking-card__ref {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+  letter-spacing: 0.1em;
+}
+.booking-card__session {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--color-on-surface);
+  margin-top: 4px;
+}
+.booking-card__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.booking-card__detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+}
+.booking-card__detail .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--color-primary-container);
+}
+.booking-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.booking-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.booking-status--pending { background: #fef3c7; color: #b45309; }
+.booking-status--confirmed { background: #dcfce7; color: #15803d; }
+.booking-status--completed { background: #dbeafe; color: #1d4ed8; }
+.booking-status--cancelled { background: #fee2e2; color: #b91c1c; }
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+.modal-content {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  padding: 4px;
+}
+.checkout-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #fdf8f9;
+  border: 1px solid rgba(212,194,199,0.3);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 16px;
+}
+.fake-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fake-input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(212,194,199,0.5);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.5);
+  color: var(--color-on-surface-variant);
+}
+.checkout-success {
+  text-align: center;
+  padding: 24px 0;
+}
+.checkout-success-icon {
+  font-size: 64px;
+  color: #15803d;
+  margin-bottom: 16px;
+}
+.mr-2 { margin-right: 8px; }
+.mt-4 { margin-top: 16px; }
+.mt-6 { margin-top: 24px; }
+.mb-6 { margin-bottom: 24px; }
+.w-full { width: 100%; }
+.text-sm { font-size: 14px; }
+
+.profile-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-on-surface-variant);
+}
+
+.profile-empty span {
+  font-size: 48px;
+  color: var(--color-outline-variant);
+  display: block;
+  margin-bottom: 16px;
+}

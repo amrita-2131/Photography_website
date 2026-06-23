@@ -1,0 +1,301 @@
+<nav className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_40px_40px_rgba(200,142,167,0.04)] transition-all duration-300 ease-in-out">
+<div className="max-w-container-max-width mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+{/*  Brand Logo  */}
+<a className="font-headline-md text-headline-md text-primary tracking-tight" href="#">Pixel Memories</a>
+{/*  Navigation Links (Desktop)  */}
+<div className="hidden md:flex items-center gap-12">
+{/*  Active Navigation  */}
+<a className="font-label-sm text-label-sm text-primary border-b border-primary/30 pb-1 uppercase tracking-widest hover:text-primary transition-colors duration-300" href="#">Home</a>
+{/*  Inactive Navigation  */}
+<a className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors duration-300" href="#">Gallery</a>
+<a className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors duration-300" href="#">About</a>
+
+</div>
+{/*  Trailing Action  */}
+<button className="hidden md:inline-flex items-center justify-center px-8 py-3 bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary transition-colors duration-300 rounded-DEFAULT">
+                Capture Now
+            </button>
+{/*  Mobile Menu Toggle  */}
+<button aria-label="Toggle Menu" className="md:hidden text-on-surface">
+<span className="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</nav>
+{/*  Main Content  */}
+<main>
+{/*  Hero Section  */}
+<section className="pt-[140px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto"><div className="flex flex-col items-center text-center gap-16">
+    <div className="max-w-3xl flex flex-col items-center gap-8 z-10">
+        <span className="font-label-sm text-label-sm text-primary-container uppercase tracking-[0.2em]">Luxury Photography Studio</span>
+        <h1 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface leading-tight">
+            Turning Moments Into <i className="text-primary font-serif">Timeless</i> Memories
+        </h1>
+        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Capturing weddings, maternity journeys, birthdays, ceremonies, and life’s most beautiful celebrations with an editorial, minimalist touch.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4 w-full sm:w-auto">
+            <button className="w-full sm:w-auto px-10 py-4 bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary transition-colors duration-300 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.2)] hover:shadow-[0_20px_40px_rgba(200,142,167,0.4)]">
+                Capture Now
+            </button>
+            <a className="w-full sm:w-auto px-10 py-4 border border-outline-variant text-on-surface font-label-sm text-label-sm uppercase tracking-widest hover:border-primary hover:text-primary transition-all duration-300 rounded-DEFAULT text-center" href="#gallery">
+                View Gallery
+            </a>
+        </div>
+    </div>
+    <div className="w-full relative overflow-hidden rounded-lg shadow-[0_40px_60px_rgba(200,142,167,0.1)]">
+        <img alt="Forever Yours - Luxury Wedding Photography" className="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-1000 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC939MQsejnCX-050jcFZELtWW12Mi_uTc3jimLv2wNc6ZuNG0s3vHP9Y549ZdJ4g-z8QF8_p31_bgpwOkIauuPzaACcYRDs_ZTxbR7sxQ2GvhJ_YoLgQx5GcRoK6stYgNqa7NH_8icZ0ADgu71bBR72C4bZcuYAdLHVRw7650oOW3-VloBT88fflsQ2c7p8acYPhdhZtPy4lwlchgVz0YTsCAaac8rEO3Df1G_ZsEIaDTgTf0yzy9vVAlH_HTgF--2oO-sjJ4kynY" />
+        
+    </div>
+</div></section>
+{/*  Featured Services (Bento Grid Style)  */}
+<section className="py-section-gap bg-surface-container-lowest" id="services">
+<div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div className="max-w-2xl">
+<h2 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Our Expertise</h2>
+<p className="font-body-md text-body-md text-on-surface-variant">Elevating every milestone into a breathtaking visual narrative. We specialize in artful documentation across life's most precious occasions.</p>
+</div>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+{/*  Service Card 1  */}
+<div className="group flex flex-col bg-surface p-10 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.03)] hover:shadow-[0_40px_40px_rgba(200,142,167,0.08)] transition-all duration-500 ease-out border border-surface-container h-full">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgt0AlzwqWyDIE-rgYdIrptEW5EEw2cNajB5_KgqkhnDaElBLfXtbsK6X64Vfk8WS1a2vDcsbPWigyXO7iWnxUwKYWfWOasuA9QiQxM3XQE8KM0e9xayRFI18GURXpC2fyP0YHpaza0jFDi_bEw-DkbmNFvzRqQ1zexWDsih0HmLYLyEkfLUMDoK1qX9wYL8aRH5Urxi6R3Pgs7ObzlceqY5Z-rdkTKgRdsbYCvwBMsBoS8rICGRpyc1cPJRm3sIhNuxO-xt4KH40" alt="Wedding photography" className="w-full h-48 object-cover rounded-DEFAULT mb-8" /><span className="material-symbols-outlined text-4xl text-primary-container mb-8 group-hover:-translate-y-2 transition-transform duration-500" data-icon="favorite">favorite</span>
+<h3 className="font-headline-md text-headline-md text-on-surface mb-3">Wedding</h3>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Timeless, editorial documentation of your most significant commitment, capturing every nuance and emotion.</p>
+<a className="inline-flex items-center font-label-sm text-label-sm uppercase tracking-widest text-primary group-hover:text-primary-container transition-colors mt-auto" href="#">
+                            Explore <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+{/*  Service Card 2  */}
+<div className="group flex flex-col bg-surface p-10 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.03)] hover:shadow-[0_40px_40px_rgba(200,142,167,0.08)] transition-all duration-500 ease-out border border-surface-container h-full">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmUgELl8OnbtcKG5VOk616VfBiWjO2XEyNLqLh7GbX2CSNUVHoe5Bu7eacn9DT_mRbKKhUgjnY2LOyjWqEtQdMZLsMJThMCB-ZvWEEz69F7ZqmHwp-x63JiFjBl4B6fcEcTrYYdaadLoktfWUSS2TshjH1NLoSN7pAaWmXzCcpo7vdwEE7FTHM9YPDtLFvKwmk1g9INNEKri1W1GIKE-9i7UGRff5jzB6zcH138L-9N0Hj2qMImWbn6G5Bz9D4tVU6gSe3rdIqs-w" alt="Maternity photography" className="w-full h-48 object-cover rounded-DEFAULT mb-8" /><span className="material-symbols-outlined text-4xl text-primary-container mb-8 group-hover:-translate-y-2 transition-transform duration-500" data-icon="pregnant_woman">pregnant_woman</span>
+<h3 className="font-headline-md text-headline-md text-on-surface mb-3">Maternity</h3>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Graceful, radiant portraiture honoring the miraculous journey of motherhood in a serene setting.</p>
+<a className="inline-flex items-center font-label-sm text-label-sm uppercase tracking-widest text-primary group-hover:text-primary-container transition-colors mt-auto" href="#">
+                            Explore <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+{/*  Service Card 3  */}
+<div className="group flex flex-col bg-surface p-10 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.03)] hover:shadow-[0_40px_40px_rgba(200,142,167,0.08)] transition-all duration-500 ease-out border border-surface-container h-full">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5iAa_KlROHy-Q-ve5LMzzU7tN6_SnCAFQm5HVsfEQ-2fRNorCTCTPODAJ-VPqnSAL1fm-Qc33Ss-pM2FSNNVNiIB2sZe-tDAxUb4jOz4UtIz1tBJFBBO1Z6CxOeTP9cXESE-7UWtMiw7wz_-uyVZNCGgWE8MsrqWL5OHPsFHDv5nkDPmfhE1P_3uFl0G7fzZY8VXF4R27GwZ_kgbwdA_IBCPX_UldPh5EWW3c71O3Z5F0KsRjnalpizgFVHRHHW2p9Gx2Irl0Kto" alt="Birthday photography" className="w-full h-48 object-cover rounded-DEFAULT mb-8" /><span className="material-symbols-outlined text-4xl text-primary-container mb-8 group-hover:-translate-y-2 transition-transform duration-500" data-icon="cake">cake</span>
+<h3 className="font-headline-md text-headline-md text-on-surface mb-3">Birthday</h3>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Vibrant, joyful captures of your annual milestones, bringing out the authentic smiles and celebration.</p>
+<a className="inline-flex items-center font-label-sm text-label-sm uppercase tracking-widest text-primary group-hover:text-primary-container transition-colors mt-auto" href="#">
+                            Explore <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+{/*  Service Card 4  */}
+<div className="group flex flex-col bg-surface p-10 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.03)] hover:shadow-[0_40px_40px_rgba(200,142,167,0.08)] transition-all duration-500 ease-out border border-surface-container h-full">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOIWLT5YlDHA2sKPUe_3ll559tc-ndOFOjTRbsEmQORR2WTJj6YoWjU7qMwDcx78r3YC388ehul2gIS1DYkm0JINFfSO8YJ8uGWmoYGuiHPOjZIsQGYbDzzhzEZqSq3dh1jtpkqgwwXj72MXKt8kDDCAGjEh7xWZnJbrrDBV8lWfzWumLiflQ_rzxGU_d34Aua5qOTWVdSdwsrKy1qBBaJpVeK0ToeQJAGpU4ffrJg7JOdOW5Ailey5m8h8AHjDgaNsWHUz1xgxWc" alt="School events photography" className="w-full h-48 object-cover rounded-DEFAULT mb-8" /><span className="material-symbols-outlined text-4xl text-primary-container mb-8 group-hover:-translate-y-2 transition-transform duration-500" data-icon="school">school</span>
+<h3 className="font-headline-md text-headline-md text-on-surface mb-3">School Events</h3>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Professional preservation of academic achievements, performances, and foundational memories.</p>
+<a className="inline-flex items-center font-label-sm text-label-sm uppercase tracking-widest text-primary group-hover:text-primary-container transition-colors mt-auto" href="#">
+                            Explore <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+{/*  Service Card 5  */}
+<div className="group flex flex-col bg-surface p-10 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.03)] hover:shadow-[0_40px_40px_rgba(200,142,167,0.08)] transition-all duration-500 ease-out border border-surface-container h-full">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4dVd3ZiD92Yk5esjViLmWR5svMn_iAcjDRPNm2p_dfTVo2P7oJsEkpgCzhiLBqcxtJaXkIHguCtQ8nd-pz__6PFt9f_FFmwxxs5Den3FGC-6N3Ris7TWxhq2YSAk6Bx6VXskWX4a3XuR9RJ49_yvczXjXTGeQwHBf2Y5juekH6KK8-4qiEBuIbsaQ4lLKYpq7NIhHS29O2TsHvTVQQjkJCcqAZRTM76d2xm23uQZWffqjm6qbaUZ9W5cLJ1vAmHGIOw8PXwEnXB0" alt="College events photography" className="w-full h-48 object-cover rounded-DEFAULT mb-8" /><span className="material-symbols-outlined text-4xl text-primary-container mb-8 group-hover:-translate-y-2 transition-transform duration-500" data-icon="local_library">local_library</span>
+<h3 className="font-headline-md text-headline-md text-on-surface mb-3">College Events</h3>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Dynamic, compelling photography for graduations, galas, and momentous collegiate gatherings.</p>
+<a className="inline-flex items-center font-label-sm text-label-sm uppercase tracking-widest text-primary group-hover:text-primary-container transition-colors mt-auto" href="#">
+                            Explore <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+{/*  Service Card 6  */}
+<div className="group flex flex-col bg-surface p-10 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.03)] hover:shadow-[0_40px_40px_rgba(200,142,167,0.08)] transition-all duration-500 ease-out border border-surface-container h-full">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2QpYrZcF7YrbgY-nSBJjVLsnKj8OBxmwdZs8CXA20TXT63gITgOdD7L-mIxbKuJzoQngJHZrsEDsu1esFWlH_JZ0JYFFx1dgY5e7XQ0MuV6Cxdo5-iEtEiwdrphV58wQYsJj7th6Bt6lIq5KOxxFTSWE9t_bY0VekgVee9bHAv3zJWpwE1Pj10z7qO_u64g-22FH89RWvlKF9eT-_tImWS2vPBp7-e0bseJ9vGATz755qomy5tDOqLBogXpI-phKEwaMY-H9xDtM" alt="Life celebrations photography" className="w-full h-48 object-cover rounded-DEFAULT mb-8" /><span className="material-symbols-outlined text-4xl text-primary-container mb-8 group-hover:-translate-y-2 transition-transform duration-500" data-icon="celebration">celebration</span>
+<h3 className="font-headline-md text-headline-md text-on-surface mb-3">Life Celebrations</h3>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">From anniversaries to reunions, documenting your unique narrative with sophistication and care.</p>
+<a className="inline-flex items-center font-label-sm text-label-sm uppercase tracking-widest text-primary group-hover:text-primary-container transition-colors mt-auto" href="#">
+                            Explore <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+{/*  Featured Portfolio (Masonry Layout)  */}
+<section className="py-section-gap bg-surface" id="gallery">
+<div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div className="text-center mb-16">
+<h2 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Selected Works</h2>
+<p className="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">A glimpse into our visual poetry. Every frame is treated as a piece of fine art, meticulously crafted for eternity.</p>
+</div>
+{/*  Masonry Grid  */}
+<div className="columns-1 md:columns-2 lg:columns-3 gap-gutter space-y-gutter">
+{/*  Item 1  */}
+<div className="break-inside-avoid relative group overflow-hidden rounded-lg shadow-[0_20px_40px_rgba(200,142,167,0.05)]">
+<img alt="Wedding portrait" className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An elegant black and white wedding photograph of a bride adjusting her veil in front of a vintage mirror. The lighting is soft and cinematic, casting delicate shadows across the room, emphasizing a high-end luxury editorial style. The mood is intimate, quiet, and profoundly romantic, perfectly matching a premium gallery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4dVd3ZiD92Yk5esjViLmWR5svMn_iAcjDRPNm2p_dfTVo2P7oJsEkpgCzhiLBqcxtJaXkIHguCtQ8nd-pz__6PFt9f_FFmwxxs5Den3FGC-6N3Ris7TWxhq2YSAk6Bx6VXskWX4a3XuR9RJ49_yvczXjXTGeQwHBf2Y5juekH6KK8-4qiEBuIbsaQ4lLKYpq7NIhHS29O2TsHvTVQQjkJCcqAZRTM76d2xm23uQZWffqjm6qbaUZ9W5cLJ1vAmHGIOw8PXwEnXB0" />
+<div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-colors duration-500"></div>
+<div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+<span className="inline-block px-3 py-1 bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-widest rounded-DEFAULT border border-primary-container/30">Wedding</span>
+</div>
+</div>
+{/*  Item 2  */}
+<div className="break-inside-avoid relative group overflow-hidden rounded-lg shadow-[0_20px_40px_rgba(200,142,167,0.05)]">
+<img alt="Maternity session" className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A breathtaking outdoor maternity photoshoot taken during golden hour in a sun-drenched, tall grass meadow. The expecting mother wears a flowing, semi-transparent cream gown that catches the warm sunlight. The image features a bright, airy, light-mode visual style with incredibly soft focus in the background, exuding femininity and tranquility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOIWLT5YlDHA2sKPUe_3ll559tc-ndOFOjTRbsEmQORR2WTJj6YoWjU7qMwDcx78r3YC388ehul2gIS1DYkm0JINFfSO8YJ8uGWmoYGuiHPOjZIsQGYbDzzhzEZqSq3dh1jtpkqgwwXj72MXKt8kDDCAGjEh7xWZnJbrrDBV8lWfzWumLiflQ_rzxGU_d34Aua5qOTWVdSdwsrKy1qBBaJpVeK0ToeQJAGpU4ffrJg7JOdOW5Ailey5m8h8AHjDgaNsWHUz1xgxWc" />
+<div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-colors duration-500"></div>
+<div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+<span className="inline-block px-3 py-1 bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-widest rounded-DEFAULT border border-primary-container/30">Maternity</span>
+</div>
+</div>
+{/*  Item 3  */}
+<div className="break-inside-avoid relative group overflow-hidden rounded-lg shadow-[0_20px_40px_rgba(200,142,167,0.05)]">
+<img alt="Event decor detail" className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A chic, high-fashion style photograph of an elaborate anniversary dinner table setting in a grand, minimalist hall. The table is adorned with lush, drooping pink and white floral arrangements and tall taper candles. The lighting is bright and even, highlighting the soft cream and rose color palette. The aesthetic is extremely sophisticated, clean, and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATjn9cmZuuoX3v_bmbGupGOEFcjHDTnEU-uHxNS2kbUEUkWr08rAIXMqT4hHwNMkDSErvvzvIl5eFAcSqPuYn1cBoqlAdoBCIVvdNcXnbMmvfuRrr1qfbX-1qhs-LQHdNPBn84q6pryf0BIB1WCUlsNtyLQ9iBjDtNQC4JYXbrtBUoRxSCEMqibViTdKlWNTwYfACTPyQlBqGCxTpxEgSVAo8SeXixrZfpSA0dlxdr1wiS9mYuWMTpWnOVflH5Z08jWrrZ75YfDas" />
+<div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-colors duration-500"></div>
+<div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+<span className="inline-block px-3 py-1 bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-widest rounded-DEFAULT border border-primary-container/30">Celebration</span>
+</div>
+</div>
+{/*  Item 4  */}
+<div className="break-inside-avoid relative group overflow-hidden rounded-lg shadow-[0_20px_40px_rgba(200,142,167,0.05)]">
+<img alt="Wedding cake detail" className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An editorial close-up portrait of a beautifully decorated wedding cake with intricate sugar flowers, set against a pristine, soft cream background. The ambient lighting casts a gentle, minimal shadow, enhancing the texture of the frosting. The composition is highly symmetric, modern, and perfectly aligned with a quiet luxury brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgt0AlzwqWyDIE-rgYdIrptEW5EEw2cNajB5_KgqkhnDaElBLfXtbsK6X64Vfk8WS1a2vDcsbPWigyXO7iWnxUwKYWfWOasuA9QiQxM3XQE8KM0e9xayRFI18GURXpC2fyP0YHpaza0jFDi_bEw-DkbmNFvzRqQ1zexWDsih0HmLYLyEkfLUMDoK1qX9wYL8aRH5Urxi6R3Pgs7ObzlceqY5Z-rdkTKgRdsbYCvwBMsBoS8rICGRpyc1cPJRm3sIhNuxO-xt4KH40" />
+<div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-colors duration-500"></div>
+<div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+<span className="inline-block px-3 py-1 bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-widest rounded-DEFAULT border border-primary-container/30">Details</span>
+</div>
+</div>
+{/*  Item 5  */}
+<div className="break-inside-avoid relative group overflow-hidden rounded-lg shadow-[0_20px_40px_rgba(200,142,167,0.05)]">
+<img alt="Graduation celebration" className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A joyful graduation photograph capturing a college graduate tossing their cap into the air against a clear, pale blue sky. The image has a very soft, film-like quality with muted, elegant colors, avoiding harsh contrast. The lighting is bright and uplifting, embodying a modern, polished aesthetic suitable for a high-end portfolio." src="https://lh3.googleusercontent.com/aida/AP1WRLvbzt_GWWIrXsDsv_0w9ARc_MRKtiCSAqdPE0cfLrcOvTDjpQQiyoDFL6FI3okqRTASEPwcI48RY69zW6y1LdIUXoiWVwrV72s-r0V6TYBjVUek67nU-025FUJ5sWwIXVm-wniOyLp7TFI4azYVgQiVxYo9FiWXs_GGZKl-RGRkeRLOp8Uq1Fpq8xnTLAkZNACVD_-A53uXdXm4Q8Y1izeJXSqb310jsz_31EZS_jJvCtW_DgQ4whu1rok" />
+<div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-colors duration-500"></div>
+<div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+<span className="inline-block px-3 py-1 bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-widest rounded-DEFAULT border border-primary-container/30">Milestone</span>
+</div>
+</div>
+{/*  Item 6  */}
+<div className="break-inside-avoid relative group overflow-hidden rounded-lg shadow-[0_20px_40px_rgba(200,142,167,0.05)]">
+    <img alt="Wedding ceremony detail" className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOEy0NrgQVPgA-MBDYn5AXjA-oxYO5Uz9wtL_KhqFpyxhoD7dsp_3XGfY9Yrv-bJLRrvtxb0o7k01DCEImpP8ZYUMxbxMsattAiKtrMrkHiAJGwMLmy-kXna-FUPFRKxvOHUCU6EVQ7CGFMrFQGdmCxhyxHEEAFia0JDffzgM5c_5YZE5fdrMnAYF9b1Bhc75pDlIdyJlmr_WBrJljC18_-NXsDpB5Nf2d2uPUhasNtLGMy30Jst-4bouJLnergkTzJuYQz7E8pr0" />
+    <div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-colors duration-500"></div>
+    <div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+        <span className="inline-block px-3 py-1 bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-widest rounded-DEFAULT border border-primary-container/30">Wedding</span>
+    </div>
+</div>
+{/*  Item 7  */}
+<div className="break-inside-avoid relative group overflow-hidden rounded-lg shadow-[0_20px_40px_rgba(200,142,167,0.05)]">
+    <img alt="Birthday celebration" className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtD_sThXSXbp4wy6jYgS3unWnzEacGszgXjmDpeQioCIgVtMvoha4yiekCZRwKl0wJZFfhRqPK5f4WCsowHv8MQekeiSHqncLBXMYP_fBhOcraQoE_uRcOUVL-sfQd40HKjTPvt00QxTJp7VV7ChRPdsmUbn0BG8RGStW5qip0bKSx5QjuNlM6Zl6snMhCYQVJcNc1DPp_1FxflQschli9mEss63m4voCtsRzjFYZvk138QgdoHKMxFwuyMr7dB1LeJR1ElINzWNs" />
+    <div className="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-colors duration-500"></div>
+    <div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+        <span className="inline-block px-3 py-1 bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-widest rounded-DEFAULT border border-primary-container/30">Birthday</span>
+    </div>
+</div></div>
+<div className="mt-16 text-center">
+<a className="inline-block border-b border-primary text-primary font-label-sm text-label-sm uppercase tracking-[0.2em] pb-2 hover:text-primary-container hover:border-primary-container transition-colors duration-300" href="#">
+                        View Full Gallery
+                    </a>
+</div>
+</div>
+</section>
+{/*  Testimonials  */}
+<section className="py-section-gap bg-surface-container-low">
+<div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div className="text-center mb-20">
+<h2 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Client Love</h2>
+<div className="w-12 h-px bg-primary-container mx-auto"></div>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+{/*  Review 1  */}
+<div className="flex flex-col items-center text-center p-8 bg-surface rounded-lg shadow-[0_40px_40px_rgba(200,142,167,0.04)] relative">
+<span className="material-symbols-outlined text-4xl text-primary-fixed-dim absolute -top-5 bg-surface rounded-full px-2">format_quote</span>
+<div className="flex gap-1 mb-6 mt-4">
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+</div>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 italic">"The team at Pixel Memories completely understood our vision. The photos feel like stills from a classic film. Absolutely breathless results."</p>
+<h4 className="font-headline-md text-xl text-on-surface">Eleanor &amp; James</h4>
+<span className="font-label-sm text-label-sm text-outline uppercase tracking-widest mt-2">Wedding Collection</span>
+</div>
+{/*  Review 2  */}
+<div className="flex flex-col items-center text-center p-8 bg-surface rounded-lg shadow-[0_40px_40px_rgba(200,142,167,0.04)] relative md:-translate-y-8">
+<span className="material-symbols-outlined text-4xl text-primary-fixed-dim absolute -top-5 bg-surface rounded-full px-2">format_quote</span>
+<div className="flex gap-1 mb-6 mt-4">
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+</div>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 italic">"A truly luxury experience from start to finish. They captured my maternity journey with such grace and softness. I will cherish these forever."</p>
+<h4 className="font-headline-md text-xl text-on-surface">Sophia M.</h4>
+<span className="font-label-sm text-label-sm text-outline uppercase tracking-widest mt-2">Maternity Session</span>
+</div>
+{/*  Review 3  */}
+<div className="flex flex-col items-center text-center p-8 bg-surface rounded-lg shadow-[0_40px_40px_rgba(200,142,167,0.04)] relative">
+<span className="material-symbols-outlined text-4xl text-primary-fixed-dim absolute -top-5 bg-surface rounded-full px-2">format_quote</span>
+<div className="flex gap-1 mb-6 mt-4">
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+<span className="material-symbols-outlined icon-fill text-lg text-primary-container">star</span>
+</div>
+<p className="font-body-md text-body-md text-on-surface-variant mb-8 italic">"They turned our daughter's 1st birthday into an editorial spread. The subtle lighting and composition are simply unmatched in the industry."</p>
+<h4 className="font-headline-md text-xl text-on-surface">The Harrison Family</h4>
+<span className="font-label-sm text-label-sm text-outline uppercase tracking-widest mt-2">Birthday Event</span>
+</div>
+</div>
+</div>
+</section>
+{/*  CTA Section  */}
+<section className="py-section-gap bg-secondary-container/30 relative overflow-hidden">
+{/*  Decorative blur element  */}
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-inverse-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
+<div className="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10 flex flex-col items-center">
+<span className="material-symbols-outlined text-5xl text-primary mb-8" data-icon="camera_enhance">camera_enhance</span>
+<h2 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-6">Let's Create Magic</h2>
+<p className="font-body-lg text-body-lg text-on-surface-variant mb-12">Our calendar is currently open for the upcoming season. Reach out to discuss your vision, reserve your date, and begin curating your bespoke photographic experience.</p>
+<button className="px-12 py-5 bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-[0.2em] hover:bg-primary transition-all duration-300 rounded-DEFAULT shadow-[0_20px_40px_rgba(200,142,167,0.2)] hover:shadow-[0_20px_40px_rgba(200,142,167,0.4)] hover:-translate-y-1">
+                    Book Your Consultation
+                </button>
+</div>
+</section>
+</main>
+{/*  Footer  */}
+<footer className="w-full pt-section-gap pb-12 bg-surface-container-low">
+<div className="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop border-b border-outline-variant/30 pb-16 mb-8">
+{/*  Brand Column  */}
+<div className="col-span-1 md:col-span-1 flex flex-col items-start">
+<a className="font-headline-md text-headline-md text-primary mb-6" href="#">Pixel Memories</a>
+<p className="font-body-md text-body-md text-on-surface-variant max-w-xs mb-8">Preserving life's most exquisite moments through an editorial lens.</p>
+<div className="flex gap-4">
+<a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:bg-primary hover:text-on-primary hover:border-primary transition-colors duration-300" href="#">
+<span className="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:bg-primary hover:text-on-primary hover:border-primary transition-colors duration-300" href="#">
+<span className="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+{/*  Links Column  */}
+<div className="col-span-1 flex flex-col gap-4">
+<h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-2">Explore</h4>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Home</a>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Services</a>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Portfolio</a>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">About the Artist</a>
+</div>
+{/*  Information Column (From JSON Links)  */}
+<div className="col-span-1 flex flex-col gap-4">
+<h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-2">Information</h4>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Studio Directions</a>
+<a className="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200 opacity-80 hover:opacity-100" href="#">FAQ</a>
+</div>
+{/*  Contact Column  */}
+<div className="col-span-1 flex flex-col gap-4">
+<h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-2">Studio</h4>
+<p className="font-body-md text-body-md text-on-surface-variant opacity-80">123 Luxury Lane<br />Art District, NY 10001</p>
+<a className="font-body-md text-body-md text-primary mt-2 hover:underline opacity-80 hover:opacity-100" href="mailto:hello@pixelmemories.com">hello@pixelmemories.com</a>
+<p className="font-body-md text-body-md text-on-surface-variant opacity-80">+1 (555) 123-4567</p>
+</div>
+</div>
+<div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+<p className="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 Pixel Memories. All rights reserved.</p>
+<p className="font-body-md text-body-md text-on-surface-variant opacity-60 text-sm">Designed with elegance.</p>
+</div>
+</footer>

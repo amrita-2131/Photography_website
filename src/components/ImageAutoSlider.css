@@ -1,0 +1,38 @@
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-scroll {
+  animation: scroll-right 40s linear infinite;
+}
+
+.scroll-container-mask {
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.auto-slider-image {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.auto-slider-image:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
