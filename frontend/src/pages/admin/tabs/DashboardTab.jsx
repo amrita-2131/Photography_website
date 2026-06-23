@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 
@@ -13,7 +14,7 @@ export default function DashboardTab() {
 
   const fetchAnalytics = useCallback(async () => {
     try {
-      const res = await authFetch('/api/analytics/dashboard');
+      const res = await authFetch(`${API_BASE}/api/analytics/dashboard`);
       if (res.ok) {
         setData(await res.json());
       }
@@ -30,7 +31,7 @@ export default function DashboardTab() {
 
   const handleExportCSV = async () => {
     try {
-      const res = await authFetch('/api/bookings/all');
+      const res = await authFetch(`${API_BASE}/api/bookings/all`);
       const json = await res.json();
       const bookings = json.bookings || [];
       const csvRows = ['Booking ID,Name,Email,Service,Date,Status,Created At'];
@@ -55,7 +56,7 @@ export default function DashboardTab() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      const res = await authFetch('/api/bookings', {
+      const res = await authFetch(`${API_BASE}/api/bookings`, {
         method: 'POST',
         body: JSON.stringify(bookingForm),
       });

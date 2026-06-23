@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 
@@ -8,7 +9,7 @@ export default function MessagesTab() {
 
   const fetchMessages = useCallback(async () => {
     try {
-      const res = await authFetch('/api/messages');
+      const res = await authFetch(`${API_BASE}/api/messages`);
       if (res.ok) {
         const data = await res.json();
         setMessages(data.messages || []);
@@ -26,7 +27,7 @@ export default function MessagesTab() {
 
   const updateStatus = async (id, status) => {
     try {
-      const res = await authFetch(`/api/messages/${id}/status`, {
+      const res = await authFetch(`${API_BASE}/api/messages/${id}/status`, {
         method: 'PATCH',
         body: JSON.stringify({ status }),
       });
@@ -41,7 +42,7 @@ export default function MessagesTab() {
   const deleteMessage = async (id) => {
     if (!window.confirm('Delete this message permanently?')) return;
     try {
-      const res = await authFetch(`/api/messages/${id}`, { method: 'DELETE' });
+      const res = await authFetch(`${API_BASE}/api/messages/${id}`, { method: 'DELETE' });
       if (res.ok) {
         setMessages(prev => prev.filter(m => m.id !== id));
       }

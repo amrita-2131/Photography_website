@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 
@@ -8,7 +9,7 @@ export default function ReviewsTab() {
 
   const fetchReviews = useCallback(async () => {
     try {
-      const res = await authFetch('/api/reviews');
+      const res = await authFetch(`${API_BASE}/api/reviews`);
       if (res.ok) {
         const data = await res.json();
         setReviews(data.reviews || []);
@@ -26,7 +27,7 @@ export default function ReviewsTab() {
 
   const updateStatus = async (id, approved) => {
     try {
-      const res = await authFetch(`/api/reviews/${id}/status`, {
+      const res = await authFetch(`${API_BASE}/api/reviews/${id}/status`, {
         method: 'PATCH',
         body: JSON.stringify({ approved }),
       });
@@ -41,7 +42,7 @@ export default function ReviewsTab() {
   const deleteReview = async (id) => {
     if (!window.confirm('Delete this review permanently?')) return;
     try {
-      const res = await authFetch(`/api/reviews/${id}`, { method: 'DELETE' });
+      const res = await authFetch(`${API_BASE}/api/reviews/${id}`, { method: 'DELETE' });
       if (res.ok) {
         setReviews(prev => prev.filter(r => r.id !== id));
       }

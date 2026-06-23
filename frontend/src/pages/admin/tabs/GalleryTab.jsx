@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 
@@ -11,7 +12,7 @@ export default function GalleryTab() {
 
   const fetchGallery = useCallback(async () => {
     try {
-      const res = await fetch('/api/gallery'); // public endpoint
+      const res = await fetch(`${API_BASE}/api/gallery`); // public endpoint
       if (res.ok) {
         const data = await res.json();
         setImages(data.images || []);
@@ -41,7 +42,7 @@ export default function GalleryTab() {
       formData.append('title', form.title);
       formData.append('category', form.category);
 
-      const res = await authFetch('/api/gallery', {
+      const res = await authFetch(`${API_BASE}/api/gallery`, {
         method: 'POST',
         // Omit Content-Type to let browser set it automatically with the boundary
         body: formData,
@@ -70,7 +71,7 @@ export default function GalleryTab() {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this image?')) return;
     try {
-      const res = await authFetch(`/api/gallery/${id}`, { method: 'DELETE' });
+      const res = await authFetch(`${API_BASE}/api/gallery/${id}`, { method: 'DELETE' });
       if (res.ok) {
         setImages(prev => prev.filter(img => img.id !== id));
       }

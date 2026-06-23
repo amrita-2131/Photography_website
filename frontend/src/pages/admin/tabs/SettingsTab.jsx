@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useState } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 
@@ -12,7 +13,7 @@ export default function SettingsTab() {
     setUpdating(true);
     setMsg('');
     try {
-      const res = await authFetch('/api/users/profile', {
+      const res = await authFetch(`${API_BASE}/api/users/profile`, {
         method: 'PATCH',
         body: JSON.stringify(form),
       });

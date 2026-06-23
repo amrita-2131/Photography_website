@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 
@@ -8,7 +9,7 @@ export default function CustomersTab() {
 
   const fetchCustomers = useCallback(async () => {
     try {
-      const res = await authFetch('/api/users/all');
+      const res = await authFetch(`${API_BASE}/api/users/all`);
       if (res.ok) {
         const data = await res.json();
         setCustomers(data.users || []);

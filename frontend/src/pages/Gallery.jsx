@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState } from 'react';
 import useReveal from '../hooks/useReveal';
 import ImageAutoSlider from '../components/ImageAutoSlider';
@@ -33,7 +34,7 @@ export default function Gallery() {
     document.title = 'Gallery | Pixel Memories';
     window.scrollTo(0, 0);
 
-    fetch('/api/gallery')
+    fetch(`${API_BASE}/api/gallery`)
       .then(res => res.json())
       .then(data => {
         if (data && data.images && data.images.length > 0) {

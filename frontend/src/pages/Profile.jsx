@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -41,7 +42,7 @@ export default function Profile() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await authFetch('/api/bookings/my');
+        const res = await authFetch(`${API_BASE}/api/bookings/my`);
         if (res.ok) {
           const data = await res.json();
           setBookings(data.bookings || []);
@@ -70,7 +71,7 @@ export default function Profile() {
     setSaving(true);
     setSaveError('');
     try {
-      const res = await authFetch('/api/users/profile', {
+      const res = await authFetch(`${API_BASE}/api/users/profile`, {
         method: 'PATCH',
         body: JSON.stringify({ name: profile.name, phone: profile.phone }),
       });

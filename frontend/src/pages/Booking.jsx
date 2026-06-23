@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -151,7 +152,7 @@ export default function Booking() {
         transactionId: `TXN-${Date.now().toString().slice(-6)}`
       };
 
-      const res = await authFetch('/api/bookings', {
+      const res = await authFetch(`${API_BASE}/api/bookings`, {
         method: 'POST',
         body: JSON.stringify(payload)
       });

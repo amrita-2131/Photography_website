@@ -1,3 +1,4 @@
+const API_BASE = import.meta.env.VITE_API_URL || '';
 import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 
@@ -9,7 +10,7 @@ export default function BookingsTab() {
 
   const fetchBookings = useCallback(async () => {
     try {
-      const res = await authFetch('/api/bookings/all');
+      const res = await authFetch(`${API_BASE}/api/bookings/all`);
       if (res.ok) {
         const data = await res.json();
         setBookings(data.bookings || []);
@@ -28,7 +29,7 @@ export default function BookingsTab() {
   const updateStatus = async (id, status) => {
     setUpdatingId(id);
     try {
-      const res = await authFetch(`/api/bookings/${id}/status`, {
+      const res = await authFetch(`${API_BASE}/api/bookings/${id}/status`, {
         method: 'PATCH',
         body: JSON.stringify({ status }),
       });
