@@ -30,7 +30,7 @@ export default function Login() {
   const returnTo = location.state?.returnTo || '/';
   const message = location.state?.message || null;
 
-  const [form, setForm] = useState({ email: 'admin21@gmail.com', password: '245301', remember: false });
+  const [form, setForm] = useState({ email: '', password: '', remember: false });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
