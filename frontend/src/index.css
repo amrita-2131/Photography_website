@@ -15,12 +15,12 @@
     --color-on-primary: #ffffff;
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Montserrat', sans-serif;
-    --space-section: 60px;
+    --space-section: 32px;
     --gutter: 24px;
   }
   @media (min-width: 768px) {
     :root {
-      --space-section: 100px;
+      --space-section: 48px;
       --gutter: 48px;
     }
   }

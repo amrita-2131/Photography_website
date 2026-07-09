@@ -63,7 +63,7 @@ export default {
         "full": "0.75rem"
       },
       "spacing": {
-        "section-gap": "120px",
+        "section-gap": "var(--space-section)",
         "margin-desktop": "80px",
         "gutter": "32px",
         "container-max-width": "1280px",
